@@ -32,35 +32,35 @@ RUN conda install --quiet --yes \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
     
-    
+#install additional libraries    
 RUN conda install 'r-randomforest'
 RUN conda install 'r-mass'
-RUN conda install     #'r-tree' && \
-RUN conda install     #'r-e1071' && \
-RUN conda install     #mgcv
-RUN conda install     #quantregForest
-RUN conda install     #ggplot2
-RUN conda install     #knitr
-RUN conda install     #rmarkdown
-RUN conda install     #data.table
-RUN conda install     #forecast
-RUN conda install     #prophet
-RUN conda install     #xts
-RUN conda install     #zoo
-RUN conda install     #highcharter
-RUN conda install     #plotly
-RUN conda install     #ggfortify
-RUN conda install     #tseries
-RUN conda install     #docstring
-RUN conda install     #here
-RUN conda install     #readr
-#RUN conda install     #rgdal
-#RUN conda install     #sp
-#RUN conda install     #leaflet
-#RUN conda install     #maps
-#RUN conda install     #Hmisc
-#RUN conda install     #owmr
-#RUN conda install     #htmltools
+RUN conda install 'r-tree'
+RUN conda install 'r-e1071'
+RUN conda install 'r-mgcv'
+RUN conda install 'r-quantregforest'
+RUN conda install 'r-ggplot2'
+RUN conda install 'r-knitr'
+RUN conda install 'r-rmarkdown'
+RUN conda install 'r-data.table'
+RUN conda install 'r-forecast'
+RUN conda install 'r-prophet'
+RUN conda install 'r-xts'
+RUN conda install 'r-zoo'
+RUN conda install 'r-highcharter'
+RUN conda install 'r-plotly'
+RUN conda install 'r-ggfortify'
+RUN conda install 'r-tseries'
+RUN conda install 'r-docstring'
+RUN conda install 'r-here'
+RUN conda install 'r-readr'
+#RUN conda install #'r-rgdal'
+#RUN conda install #'r-sp'
+#RUN conda install #'r-leaflet'
+#RUN conda install #'r-maps'
+#RUN conda install #'r-Hmisc'
+#RUN conda install #'r-owmr'
+#RUN conda install #'r-htmltools'
 
 # Apache Toree kernel
 RUN pip install --no-cache-dir \

@@ -33,6 +33,7 @@ RUN conda install --quiet --yes \
     fix-permissions /home/$NB_USER
     
 #install additional libraries    
+RUN conda install --yes -c cvxgrp cvxpy
 RUN conda install --yes 'r-randomforest'
 RUN conda install --yes 'r-mass'
 RUN conda install --yes 'r-tree'

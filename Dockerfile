@@ -20,16 +20,21 @@ RUN apt-get update && \
 
 USER $NB_UID
 
-
+#RUN conda update -n base -c defaults conda
 # R packages
 RUN conda install --quiet --yes \
-    'r-base=3.4.5' \
+    'r-base=3.5.1' \
     'r-irkernel=0.8*' \
     'r-ggplot2=3.1*' \
     'r-sparklyr=0.9*' \
     'r-rcurl=1.95*' && \
-    #'r-randomforest' && \
-    'r-mass=7.3' && \
+    conda clean -tipsy && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
+    
+    
+RUN conda install 'r-randomforest'
+    #'r-mass=7.3' && \
     #'r-tree' && \
     #'r-e1071' && \
     #'r-xg' && \
@@ -60,9 +65,7 @@ RUN conda install --quiet --yes \
     #owmr
     #htmltools
     
-    conda clean -tipsy && \
-    fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
+
 
 # Apache Toree kernel
 RUN pip install --no-cache-dir \

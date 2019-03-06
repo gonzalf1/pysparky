@@ -34,38 +34,33 @@ RUN conda install --quiet --yes \
     
     
 RUN conda install 'r-randomforest'
-    #'r-mass=7.3' && \
-    #'r-tree' && \
-    #'r-e1071' && \
-    #'r-xg' && \
-    #mgcv
-    #quantregForest
-    #ggplot2
-    #knitr
-    #rmarkdown
-    #data.table
-    #forecast
-    #prophet
-    #xts
-    #zoo
-    #highcharter
-    #dygraphs
-    #plotly
-    #ggfortify
-    #tseries
-    #gridExtra
-    #docstring
-    #here
-    #readr
-    #rgdal
-    #sp
-    #leaflet
-    #maps
-    #Hmisc
-    #owmr
-    #htmltools
-    
-
+RUN conda install 'r-mass'
+RUN conda install     #'r-tree' && \
+RUN conda install     #'r-e1071' && \
+RUN conda install     #mgcv
+RUN conda install     #quantregForest
+RUN conda install     #ggplot2
+RUN conda install     #knitr
+RUN conda install     #rmarkdown
+RUN conda install     #data.table
+RUN conda install     #forecast
+RUN conda install     #prophet
+RUN conda install     #xts
+RUN conda install     #zoo
+RUN conda install     #highcharter
+RUN conda install     #plotly
+RUN conda install     #ggfortify
+RUN conda install     #tseries
+RUN conda install     #docstring
+RUN conda install     #here
+RUN conda install     #readr
+#RUN conda install     #rgdal
+#RUN conda install     #sp
+#RUN conda install     #leaflet
+#RUN conda install     #maps
+#RUN conda install     #Hmisc
+#RUN conda install     #owmr
+#RUN conda install     #htmltools
 
 # Apache Toree kernel
 RUN pip install --no-cache-dir \

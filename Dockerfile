@@ -1,4 +1,4 @@
-# Copyright (c) Jupyter Development Team.
+# Copyright (c) gonzalf1
 # Distributed under the terms of the Modified BSD License.
 ARG BASE_CONTAINER=jupyter/pyspark-notebook
 FROM $BASE_CONTAINER
@@ -23,22 +23,16 @@ USER $NB_UID
 
 # R packages
 RUN conda install --quiet --yes \
-    'r-base=3.5.1' \
+    'r-base=3.4.5' \
     'r-irkernel=0.8*' \
     'r-ggplot2=3.1*' \
     'r-sparklyr=0.9*' \
     'r-rcurl=1.95*' && \
-    
-#randomForest
-#e10741
-#tree
-#MASS
-
-#forecast
-#prophet
-    
-    
-    
+    'r-randomforest' && \
+    'r-mass=7.3' && \
+    'r-tree' && \
+    'r-e1071' && \
+    #'r-xg' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER

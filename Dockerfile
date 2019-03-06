@@ -33,6 +33,33 @@ RUN conda install --quiet --yes \
     'r-tree' && \
     'r-e1071' && \
     #'r-xg' && \
+    #mgcv
+    #quantregForest
+    #ggplot2
+    #knitr
+    #rmarkdown
+    #data.table
+    #forecast
+    #prophet
+    #xts
+    #zoo
+    #highcharter
+    #dygraphs
+    #plotly
+    #ggfortify
+    #tseries
+    #gridExtra
+    #docstring
+    #here
+    #readr
+    #rgdal
+    #sp
+    #leaflet
+    #maps
+    #Hmisc
+    #owmr
+    #htmltools
+    
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER

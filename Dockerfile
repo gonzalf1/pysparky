@@ -28,10 +28,10 @@ RUN conda install --quiet --yes \
     'r-ggplot2=3.1*' \
     'r-sparklyr=0.9*' \
     'r-rcurl=1.95*' && \
-    'r-randomforest' && \
+    #'r-randomforest' && \
     'r-mass=7.3' && \
-    'r-tree' && \
-    'r-e1071' && \
+    #'r-tree' && \
+    #'r-e1071' && \
     #'r-xg' && \
     #mgcv
     #quantregForest
